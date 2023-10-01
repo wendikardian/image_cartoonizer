@@ -3,12 +3,12 @@ import numpy as np
 
 num_down = 2
 num_bilateral = 7
-img = cv2.imread("test.png")
+img = cv2.imread("results/messi.jpg")
 
 #cv2.imshow("image",img)
-#print(img.shape)
+#print(img.shape)an
 
-img = cv2.resize(img,(800,500))
+img = cv2.resize(img,(800,600))
 img_color = img.copy()
 gpA = [img_color]
 
