@@ -12,16 +12,16 @@ img = cv2.resize(img,(800,600))
 img_color = img.copy()
 gpA = [img_color]
 
-for i in range(num_down):
-    img_color = cv2.pyrDown(img_color)
-    gpA.append(img_color)
+# for i in range(num_down):
+#     img_color = cv2.pyrDown(img_color)
+#     gpA.append(img_color)
 
-for i in range(num_bilateral):
-    img_color = cv2.bilateralFilter(img_color, d = 9, sigmaColor = 9, sigmaSpace = 7)
+# for i in range(num_bilateral):
+#     img_color = cv2.bilateralFilter(img_color, d = 9, sigmaColor = 9, sigmaSpace = 7)
 
-for i in range(num_down):
-    img_color = cv2.pyrUp(img_color)
-    gpA.append(img_color)
+# for i in range(num_down):
+#     img_color = cv2.pyrUp(img_color)
+#     gpA.append(img_color)
 
 grayscaled = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 blurred = cv2.medianBlur(grayscaled, 7)
